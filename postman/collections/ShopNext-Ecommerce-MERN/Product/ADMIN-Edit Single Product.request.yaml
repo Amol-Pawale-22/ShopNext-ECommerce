@@ -1,0 +1,37 @@
+$kind: http-request
+name: ADMIN--Edit Single Product
+description: |-
+  Generated from cURL: curl --location --request PUT "http://localhost:3000/products/PRODUCT_ID" \
+    --header "Authorization: Bearer YOUR_ADMIN_TOKEN" \
+    --form "name=Updated Product Name" \
+    --form "description=Updated product description" \
+    --form "price=49.99" \
+    --form "category=Electronics" \
+    --form "stock=25" \
+    --form "image=@C:/path/to/image.jpg"
+url: http://localhost:3000/products/6ae9907ec3b31762b33140e1
+method: PUT
+headers:
+  Authorization: Bearer YOUR_ADMIN_TOKEN
+body:
+  type: formdata
+  content:
+    - type: text
+      key: name
+      value: Updated Product Name
+    - type: text
+      key: description
+      value: Updated product description
+    - type: text
+      key: price
+      value: "49.99"
+    - type: text
+      key: category
+      value: Electronics
+    - type: text
+      key: stock
+      value: "25"
+    - type: file
+      key: image
+      src: C:/path/to/image.jpg
+order: 5000

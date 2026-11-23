@@ -1,0 +1,91 @@
+$kind: http-request
+name: Place A Order
+description: "Generated from cURL: curl.exe -X POST
+  \"http://localhost:3000/orders\" `\r
+
+  \  -H \"Content-Type: application/json\" `\r
+
+  \  -H \"Authorization: Bearer YOUR_AUTH_TOKEN\" `\r
+
+  \  -d '{\r
+
+  \    \"items\": [\r
+
+  \      {\r
+
+  \        \"productId\": \"YOUR_PRODUCT_ID\",\r
+
+  \        \"quantity\": 1,\r
+
+  \        \"price\": 25\r
+
+  \      }\r
+
+  \    ],\r
+
+  \    \"totalAmount\": 25,\r
+
+  \    \"address\": {\r
+
+  \      \"fullName\": \"Jane Doe\",\r
+
+  \      \"street\": \"123 Main Street\",\r
+
+  \      \"city\": \"Example City\",\r
+
+  \      \"postalCode\": \"12345\",\r
+
+  \      \"country\": \"US\"\r
+
+  \    },\r
+
+  \    \"paymentId\": \"YOUR_PAYMENT_ID\"\r
+
+  \  }'"
+url: http://localhost:3000/orders/
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer YOUR_AUTH_TOKEN
+body:
+  type: json
+  content: "{\r
+
+    \    \"items\": [\r
+
+    \      {\r
+
+    \        \"productId\": \"6ae98e559a073852592d0654\",\r
+
+    \        \"quantity\": 2,\r
+
+    \        \"price\": 99.99\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"totalAmount\": 199.98,\r
+
+    \    \"address\": {\r
+
+    \      \"fullName\": \"Jane Doe\",\r
+
+    \      \"street\": \"123 Main Street\",\r
+
+    \      \"city\": \"Example City\",\r
+
+    \      \"postalCode\": \"12345\",\r
+
+    \      \"country\": \"US\"\r
+
+    \    },\r
+
+    \    \"paymentId\": \"pay_123456789\"\r
+
+    \  }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_00hu}}"
+order: 1000

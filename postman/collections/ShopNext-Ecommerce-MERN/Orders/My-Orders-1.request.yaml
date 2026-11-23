@@ -1,0 +1,57 @@
+$kind: http-request
+name: My-Orders
+description: "Generated from cURL: curl.exe -X POST
+  \"http://localhost:3000/orders\" `\r
+
+  \  -H \"Content-Type: application/json\" `\r
+
+  \  -H \"Authorization: Bearer YOUR_AUTH_TOKEN\" `\r
+
+  \  -d '{\r
+
+  \    \"items\": [\r
+
+  \      {\r
+
+  \        \"productId\": \"YOUR_PRODUCT_ID\",\r
+
+  \        \"quantity\": 1,\r
+
+  \        \"price\": 25\r
+
+  \      }\r
+
+  \    ],\r
+
+  \    \"totalAmount\": 25,\r
+
+  \    \"address\": {\r
+
+  \      \"fullName\": \"Jane Doe\",\r
+
+  \      \"street\": \"123 Main Street\",\r
+
+  \      \"city\": \"Example City\",\r
+
+  \      \"postalCode\": \"12345\",\r
+
+  \      \"country\": \"US\"\r
+
+  \    },\r
+
+  \    \"paymentId\": \"YOUR_PAYMENT_ID\"\r
+
+  \  }'"
+url: http://localhost:3000/orders/
+method: GET
+headers:
+  Content-Type: application/json
+  Authorization: Bearer YOUR_AUTH_TOKEN
+body:
+  type: json
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0llq}}"
+order: 4000

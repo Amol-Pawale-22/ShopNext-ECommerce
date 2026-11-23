@@ -1,0 +1,34 @@
+$kind: http-request
+name: ADMIN--Get New Products
+description: 'Generated from cURL: curl --location
+  "http://localhost:3000/products" --header "Authorization: Bearer
+  YOUR_ADMIN_TOKEN" --form "name=Wireless Headphones" --form
+  "description=Bluetooth headphones with noise cancellation" --form
+  "price=79.99" --form "category=Electronics" --form "stock=25" --form
+  "image=@C:\path\to\product-image.jpg"'
+url: http://localhost:3000/products
+method: POST
+headers:
+  Authorization: Bearer YOUR_ADMIN_TOKEN
+body:
+  type: formdata
+  content:
+    - type: text
+      key: name
+      value: Wireless Headphones
+    - type: text
+      key: description
+      value: Bluetooth headphones with noise cancellation
+    - type: text
+      key: price
+      value: "79.99"
+    - type: text
+      key: category
+      value: Electronics
+    - type: text
+      key: stock
+      value: "25"
+    - type: file
+      key: image
+      src: C:\path\to\product-image.jpg
+order: 3374
